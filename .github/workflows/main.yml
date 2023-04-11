@@ -31,7 +31,7 @@ jobs:
       - name: Get temporary IAM credentials
         id: sts
         run: |
-          aws sts assume-role --role-arn ${{ secrets.IAM_ROLE_ARN }} --role-session-name "GitHubAction"
+          aws sts assume-role --role-arn ${{ secrets.IAM_USER_ARN }} --role-session-name "GitHubAction"
           echo "::set-output name=access_key::$(echo '${{ steps.sts.outputs.stdout }}' | jq -r '.Credentials.AccessKeyId')"
           echo "::set-output name=secret_key::$(echo '${{ steps.sts.outputs.stdout }}' | jq -r '.Credentials.SecretAccessKey')"
           echo "::set-output name=session_token::$(echo '${{ steps.sts.outputs.stdout }}' | jq -r '.Credentials.SessionToken')"
