@@ -10,11 +10,18 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install AWS CLI
+      - name: Install AWS CLI and Configure credentials
         run: |
           sudo apt-get update
           sudo apt-get install -y python3-pip
           pip3 install awscli --upgrade
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set default.region us-east-1
+          aws sts assume-role --role-arn ${{ secrets.IAM_ROLE_ARN }} --role-session-name "GitHubAction"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Manage credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -37,7 +44,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ steps.sts.outputs.secret_key }}
           AWS_SESSION_TOKEN: ${{ steps.sts.outputs.session_token }}
       - name: Copy files to EC2
-        run:
+        run: |
           aws configure set region us-east-1
           ssh-keyscan -t rsa ${{ secrets.HOST }} >> ~/.ssh/known_hosts
           scp -o "StrictHostKeyChecking=no" -i ~/.ssh/id_rsa -r * ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}:/var/www/html/
