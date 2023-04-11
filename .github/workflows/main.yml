@@ -10,11 +10,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Deploy to AWS
-        uses: appleboy/scp-action@master
+      - name: Install AWS CLI
+        run:
+          sudo apt-get update && sudo apt-get install -y python3-pip
+          pip3 install awscli --upgrade --user
+      - name: Manage credentials
+        uses: clowdhaus/aws-github-actions/iam_access_credentials@main
         with:
-          host: ${{ secrets.AWS_HOST }}
-          username: ${{ secrets.AWS_USERNAME }}
-          key: ${{ secrets.AWS_KEY }}
-          source: '.'
-          target: '/var/www/html/'
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Deploy to EC2
+        run:
+          aws ec2 describe-instances --instance-ids ${{ secrets.INSTANCEID }}
+
