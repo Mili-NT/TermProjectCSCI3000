@@ -49,10 +49,8 @@ jobs:
           mkdir ~/.ssh
           touch ~/.ssh/known_hosts
           ssh-keyscan -t rsa ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
-          curl https://whatsmyip.dev/api/ip
-          ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
-          ssh-copy-id -i ~/.ssh/id_rsa.pub ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}
-          scp -o "StrictHostKeyChecking=no" -i ~/.ssh/id_rsa -r * ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}:/var/www/html/
+          
+          scp -o "StrictHostKeyChecking=no" -i ${{ secrets.PRIV_KEY }} -r * ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}:/var/www/html/
         env:
           AWS_ACCESS_KEY_ID: ${{ steps.sts.outputs.access_key }}
           AWS_SECRET_ACCESS_KEY: ${{ steps.sts.outputs.secret_key }}
