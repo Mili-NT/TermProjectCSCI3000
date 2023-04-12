@@ -49,7 +49,7 @@ jobs:
           mkdir ~/.ssh
           touch ~/.ssh/known_hosts
           ssh-keyscan -t rsa ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
-          echo ${{ secrets.PRIV_KEY }} >> key.pem
+          echo "${{ secrets.PRIV_KEY }}" >> key.pem
           scp -o "StrictHostKeyChecking=no" -i key.pem -r * ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}:/var/www/html/
           rm -f key.pem
         env:
