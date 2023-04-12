@@ -48,7 +48,6 @@ jobs:
           aws configure set region us-east-1
           mkdir ~/.ssh
           touch ~/.ssh/known_hosts
-          touch ~/.ssh/id_rsa
           ssh-keyscan -t rsa ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
           ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
           ssh-copy-id -i ~/.ssh/id_rsa.pub ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}
