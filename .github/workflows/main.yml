@@ -46,6 +46,7 @@ jobs:
       - name: Copy files to EC2
         run: |
           aws configure set region us-east-1
+          touch ~/.ssh/known_hosts
           ssh-keyscan -t rsa ${{ secrets.HOST }} >> ~/.ssh/known_hosts
           scp -o "StrictHostKeyChecking=no" -i ~/.ssh/id_rsa -r * ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}:/var/www/html/
         env:
