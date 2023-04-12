@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>CSCI 3000 Term Project</title>
-</head>
+<html>
+<meta charset="UTF-8">
+<title>Pizza</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+</style>
 <body>
-    <h1>This is a Heading </h1>
-    <p>This is a paragraph. </p>
+<!-- Start Content -->
+<div id="home" class="w3-content">
+
+<!-- Navbar (Sits on top) -->
+<div class="w3-top w3-bar w3-xlarge w3-black w3-opacity-min">
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+</div>
+  
+<!-- Header image -->
+<div style="height:800px;background-image:url('img_pizza.jpg');background-size:cover"
+class="w3-display-container w3-grayscale-min">
+<div class="w3-display-bottomleft">
+  <span class="w3-tag w3-xlarge">Open from 7am to 12pm</span>
+</div>
+<div class="w3-display-middle w3-center">
+  <span class="w3-text-white" style="font-size:100px">MEATY<br>Omlette</span>
+  <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
+</div>
+</div>
+
+<!-- Menu -->
+<div id="menu" class="w3-container w3-black w3-xxlarge w3-padding-64">
+<h1 class="w3-center w3-jumbo w3-padding-32">THE MENU</h1>
+<div class="w3-row w3-center w3-border w3-border-dark-grey">
+    <a href="#breakfast_entrees"><div class="w3-third w3-padding-large w3-red">Breakfast Entrees</div></a>
+    <a href="#omelettes"><div class="w3-third w3-padding-large w3-hover-red">Omelettes</div></a>
+    <a href="#specialty_items"><div class="w3-third w3-padding-large w3-hover-red">Specialty Items</div></a>
+    <a href="#sides"><div class="w3-third w3-padding-large w3-hover-red">Sides</div></a>
+    <a href="#beverages"><div class="w3-third w3-padding-large w3-hover-red">Beverages</div></a>
+</div>
+
+<div id="breakfast_entrees" class="w3-container w3-white w3-padding-32">
+    <h1><b>Classic American Breakfast</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.00</span></h1>
+    <p class="w3-text-grey">Two eggs any style, bacon or sausage, hash browns, toast</p>
+    <hr>
+    <h1><b>Pancakes</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+    <p class="w3-text-grey">Buttermilk or gluten-free</p>
+    <hr>
+    <h1><b>French Toast</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+    <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+    <hr>
+    <h1><b>Waffles</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+    <p class="w3-text-grey">with whipped cream and fruit!</p>
+    <hr>
+    <h1><b>Breakfast Burrito</b> <span class="w3-tag w3-red w3-round">Hot!</span>
+    <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+    <p class="w3-text-grey">scrambled eggs, cheese, potatoes, choice of bacon or sausage, wrapped in a flour tortilla</p>
+</div>
+
+<h1 id="omelettes" class="w3-center w3-jumbo w3-padding-32">Omelettes</h1>
+    <div class="w3-container w3-white w3-padding-32">
+    <h1><b>Western Omelette</b> <span class="w3-tag w3-grey w3-round">Popular</span>
+    <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+    <p class="w3-text-grey">(ham, peppers, onions, and cheddar cheese)</p>
+    <hr>
+    <h1><b>Vegetarian Omelette</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+    <p class="w3-text-grey">(spinach, mushrooms, onions, and Swiss cheese)</p>
+    <hr>
+    <h1><b>Meat Lover's Omelette</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+    <p class="w3-text-grey">(sausage, bacon, ham, and cheddar cheese)</p>
+</div>
+
+<h1 id="specialty_items" class="w3-center w3-jumbo w3-padding-32">Specialty Items</h1>
+<div class="w3-container w3-white w3-padding-32">
+    <h1><b>Avocado Toast</b> <span class="w3-tag w3-grey w3-round">Seasonal</span>
+    <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+    <p class="w3-text-grey">with a poached egg adn microgreens</p>
+    <hr>
+    <h1><b>Huevos Rancheros</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+    <p class="w3-text-grey">Two eggs, black beans, salsa, and tortilla chips</p>
+    <hr>
+    <h1><b>Smoked Salmon Bagel</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+    <p class="w3-text-grey">with cream cheese, capers, and red onion</p>
+    <hr>
+    <h1><b>Breakfast Sandwich</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+    <p class="w3-text-grey">with egg, cheese, and choice of bacon, sausage, or ham</p>
+</div>
+
+<h1 id="sides" class="w3-center w3-jumbo w3-padding-32">Sides</h1>
+<div class="w3-container w3-white w3-padding-32">
+    <h1><b>Hash Browns</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.00</span></h1>
+    <h1><b>Grits</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.00</span></h1>
+    <h1><b>Toast</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$2.50</span></h1>
+    <p class="w3-text-grey">white, wheat, or sourdough</p>
+    <h1><b>Bacon</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.50</span></h1>
+    <p class="w3-text-grey">pork or turkey</p>
+    <h1><b>Sausage</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.50</span></h1>
+    <p class="w3-text-grey">pork or turkey</p>
+    <h1><b>Fresh Fruit Cup</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$4.50</span></h1>
+    <h1><b>Yogurt Parfait</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+    <p class="w3-text-grey">with granola and fresh berries</p>
+</div>
+
+<h1 id="beverages" class="w3-center w3-jumbo w3-padding-32">Beverages</h1>
+<div class="w3-container w3-white w3-padding-32">
+    <h1><b>Coffee</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.00</span></h1>
+    <p class="w3-text-grey">Hot or iced</p>
+    <h1><b>Tea</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.00</span></h1>
+    <p class="w3-text-grey">black, green, or herbal</p>
+    <h1><b>Orange Juice</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.00</span></h1>
+    <h1><b>Apple Juice</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.00</span></h1>
+    <h1><b>Grapefruit Juice</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.00</span></h1>
+    <h1><b>Milk</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3.00</span></h1>
+    <p class="w3-text-grey">regular or non-dairy</p>
+</div>
+</div>
+
+</div>
 </body>
 </html>
