@@ -50,7 +50,7 @@ jobs:
           touch ~/.ssh/known_hosts
           ssh-keyscan -t rsa ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
           echo "${{ secrets.PRIV_KEY }}" >> /tmp/key.pem
-          chmod 600 key.pem
+          chmod 600 /tmp/key.pem
           sudo scp -o "StrictHostKeyChecking=no" -i /tmp/key.pem -r * ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}:/var/www/html/
           rm -f /tmp/key.pem
         env:
