@@ -151,3 +151,8 @@ color:white;
     flex-wrap: wrap;
     font-size: 12px;
 }
+.footer .button{
+    opacity: 1;
+    background-color: white;
+    color: black;
+    }
