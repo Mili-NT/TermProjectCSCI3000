@@ -120,7 +120,6 @@ color:white;
 }
 
 /*footer*/
-
 .footer{
     background: grey;
     opacity: 0.5;
@@ -132,6 +131,7 @@ color:white;
     /*border: 1px solid blue;*/
     height: 350px;
     display: flex;
+    position: absolute;
 }
 
 .footer .footer-content .bottom-section{
@@ -139,14 +139,3 @@ color:white;
     padding: 25px;
     border: 1px solid white;
 }
-
-.footer .phone ::after{
-content: "\a";
-white-space: pre;
-}
-
-.footer .email ::before{
-    content: "\a";
-    white-space: pre;
-    }
-
