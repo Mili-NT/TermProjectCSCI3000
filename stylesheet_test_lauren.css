@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;  
+    background-color: antiquewhite;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+/*header*/
+.header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: #F79256;
+    justify-content:space-between; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo{
+    color:#FFF;
+    font-weight: 900;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+
+}
+nav ul li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+nav ul li a{
+    color: #FFF;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 1px;
+}
+
+nav ul li a:hover{
+    color:#FBD1A2;
+}
+
+.button{
+background-color: #FBD1A2;
+color:#FFF;
+}
+.button:hover{
+    background-color: #FFBD73;
+    color:#FFF;
+}
+
+/*image text*/
+
+.home .home-image{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat
+    
+}
+
+.home .content{
+    padding:140px 0;
+    text-align: center;   
+}
+
+.home .content span{
+font-size: large;
+display: block;
+padding-bottom: 5px;
+color:white;
+}
+
+.home .content h3{
+    font-size: 30px;
+    text-transform:capitalize;
+    color:white;
+    padding: 2px 0px;
+    line-height: 1;
+    padding:2px;
+}
+
+/*about us*/
+.about-us .content .box{
+    padding: 3rem 2rem;
+    text-align: left;
+    background: white;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 30px;
+    
+}
+
+.barista{
+    float: left;
+    margin-right: 20px;
+    border-radius: 25px;
+}
+
+.about-us p{
+    padding-bottom: 10px;
+}
+
+/*footer*/
+
+.footer{
+    background: grey;
+    opacity: 0.5;
+    color: white;
+    height: 400px;
+}
+
+.footer .footer-content{
+    /*border: 1px solid blue;*/
+    height: 350px;
+    display: flex;
+}
+
+.footer .footer-content .bottom-section{
+    flex: 1;
+    padding: 25px;
+    border: 1px solid white;
+}
+
+.footer .phone ::after{
+content: "\a";
+white-space: pre;
+}
+
+.footer .email ::before{
+    content: "\a";
+    white-space: pre;
+    }
+
