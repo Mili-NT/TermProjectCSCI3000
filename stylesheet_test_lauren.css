@@ -120,9 +120,10 @@ color:white;
 }
 
 /*footer*/
+
 .footer{
-    background: grey;
-    opacity: 0.5;
+    background: black;
+    opacity: 0.7;
     color: white;
     height: 400px;
 }
@@ -137,5 +138,16 @@ color:white;
 .footer .footer-content .bottom-section{
     flex: 1;
     padding: 25px;
-    border: 1px solid white;
+    border: 1px;
+}
+
+.footer .logo-text .contact{
+    display:flex;
+    flex-wrap: wrap;
+}
+.footer p{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
 }
