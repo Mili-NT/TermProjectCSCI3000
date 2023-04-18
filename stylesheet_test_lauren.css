@@ -156,3 +156,7 @@ color:white;
     background-color: white;
     color: black;
     }
+    .footer .bottom-section .text-input{
+        position:relative;
+        display: flex;
+    }
