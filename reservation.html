@@ -7,6 +7,102 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheet-reservation.css">
     </head>
+    <style>
+        /* Apply some styles to the banner section */
+.banner {
+  background-color: #f7f7f7;
+  padding: 50px;
+  text-align: center;
+}
+
+.banner h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Apply some styles to the card-container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card-img {
+  width: 300px;
+  height: 300px;
+  background-image: url('path/to/your/image.jpg');
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.card-content {
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.card-content h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Apply some styles to the form elements */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+select, input[type="text"], input[type="number"], input[type="submit"] {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #666;
+  width: 45%;
+  max-width: 45%;
+  box-sizing: border-box;
+}
+
+select:hover, input[type="text"]:hover, input[type="number"]:hover, input[type="submit"]:hover {
+  border-color: #333;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #666;
+}
+
+/* Apply some responsive styles */
+@media only screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+  
+  .card-img {
+    margin-bottom: 20px;
+  }
+  
+  select, input[type="text"], input[type="number"], input[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+    </style>
     <body>
         
         <section class = "banner">
