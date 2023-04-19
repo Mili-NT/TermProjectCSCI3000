@@ -30,8 +30,13 @@ li{
     z-index: 1000;
 }
 
+.content .header-title{
+    color: #f99b64;
+    font-size:30px ;
+}
+
 .logo{
-    color:#FFF;
+    color: #fff;;
     font-weight: 900;
 }
 
@@ -86,11 +91,14 @@ display: block;
 padding-bottom: 5px;
 color:white;
 }
-
+.home .content .text{
+    color: #f99b64;
+    font-size:100px;
+}
 .home .content h3{
     font-size: 30px;
     text-transform:capitalize;
-    color:white;
+    color:#f99b64;
     padding: 2px 0px;
     line-height: 1;
     padding:2px;

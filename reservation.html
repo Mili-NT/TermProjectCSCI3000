@@ -9,6 +9,23 @@
     </head>
     <style>
         /* Apply some styles to the banner section */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;  
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
 .banner {
   background-color: #f7f7f7;
   padding: 50px;
@@ -100,10 +117,77 @@ input[type="submit"]:hover {
     width: 100%;
     max-width: 100%;
   }
+  
+/*header*/
+.header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: #F79256;
+    justify-content:space-between; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.content .header-title{
+    color: #f99b64;
+    font-size:30px ;
+}
+
+.logo{
+    color: #fff;;
+    font-weight: 900;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+
+}
+nav ul li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+nav ul li a{
+    color: #FFF;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 1px;
+}
+
+nav ul li a:hover{
+    color:#FBD1A2;
+}
+
+.button{
+background-color: #FBD1A2;
+color:#FFF;
+}
+.button:hover{
+    background-color: #FFBD73;
+    color:#FFF;
+}
 }
 
     </style>
     <body>
+<!--navigation header-->
+<section class="header">
+  <a href="#name" class="logo">Daily Brew</a>
+<nav>
+<ul>
+  <li><a href="#home" >Home</a></li>
+  <li><a href="#menu" >Menu</a></li>
+  <li><a href="#about" >About Us</a></li>
+  <li><a href="#contact">Contact Us</a></li>
+  <li><a href="#reservation" class="button">Book Reservation</a></li>
+</ul>
+</nav>
+</section>
         
         <section class = "banner">
             <h2>Book Reservation Now</h2>
