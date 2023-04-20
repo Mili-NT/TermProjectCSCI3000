@@ -90,10 +90,8 @@ display: block;
 padding-bottom: 5px;
 color:white;
 }
-.home .content .text{
-    color: #FBD1A2;
-    font-size:100px;
-}
+
+
 .home .content h3{
     font-size: 30px;
     text-transform:capitalize;
