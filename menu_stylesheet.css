@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/*header*/
+.header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: #F79256;
+    justify-content:space-between; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.content .header-title{
+    color: #f99b64;
+    font-size:30px ;
+}
+
+.logo{
+    color: #fff;;
+    font-weight: 900;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+
+}
+nav ul li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+nav ul li a{
+    color: #FFF;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 1px;
+}
+
+nav ul li a:hover{
+    color:#FBD1A2;
+}
+
+.button{
+background-color: #FBD1A2;
+color:#FFF;
+}
+.button:hover{
+    background-color: #FFBD73;
+    color:#FFF;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222;
+}
+.main{
+    width: 1170px;
+    margin: 100px auto;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.section-title h2 {
+    text-transform: capitalize;
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+.section-title h2:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #00875c;
+    bottom: 0;
+    left: 30%;
+}
+.menus {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+.menus-column {
+    width: 31%;
+}
+.menus-column h4 {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.menus-coulmn h4:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #00875c;
+    bottom: 0;
+}
+.single-menu {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.single-menu img {
+    border-radius: 50%;
+    max-width: 110px;
+    border: 1px dashed #ddd;
+    padding: 3px;
+    margin-right: 15px;
+    transition: .3s;
+}
+.single-menu:hover img{
+    transform: rotate(360deg);
+}
+.single-menu .menu-content h5 {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 1px dashed #222;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}.single-menu .menu-content h5 span {
+    color: tomato;
+    float: right;
+    font-weight: 600;
+    font-style: italic;
+}

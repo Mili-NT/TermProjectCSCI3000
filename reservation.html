@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reservation Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet-reservation.css">
+    </head>
+    <style>
+        /* Apply some styles to the banner section */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;  
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+.banner {
+  background-color: #f7f7f7;
+  padding: 50px;
+  text-align: center;
+}
+
+.banner h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Apply some styles to the card-container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card-img {
+  width: 300px;
+  height: 300px;
+  background-image: url('image/path');
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.card-content {
+  width: 400px;
+  padding: 20px;
+  background-color: #f79256;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.card-content h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Apply some styles to the form elements */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+select, input[type="text"], input[type="number"], input[type="submit"] {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #666;
+  width: 45%;
+  max-width: 45%;
+  box-sizing: border-box;
+}
+
+select:hover, input[type="text"]:hover, input[type="number"]:hover, input[type="submit"]:hover {
+  border-color: #333;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #666;
+}
+
+/* Apply some responsive styles */
+@media only screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+  
+  .card-img {
+    margin-bottom: 20px;
+  }
+  
+  select, input[type="text"], input[type="number"], input[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+/*header*/
+.header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: #F79256;
+    justify-content:space-between; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.content .header-title{
+    color: #f99b64;
+    font-size:30px ;
+}
+
+.logo{
+    color: #fff;;
+    font-weight: 900;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+
+}
+nav ul li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+nav ul li a{
+    color: #FFF;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 1px;
+}
+
+nav ul li a:hover{
+    color:#FBD1A2;
+}
+
+.button{
+background-color: #FBD1A2;
+color:#FFF;
+}
+.button:hover{
+    background-color: #FFBD73;
+    color:#FFF;
+}
+}
+
+    </style>
+    <body>
+<!--navigation header-->
+<section class="header">
+  <a href="#name" class="logo">Daily Brew</a>
+<nav>
+<ul>
+  <li><a href="#home" >Home</a></li>
+  <li><a href="#menu" >Menu</a></li>
+  <li><a href="#about" >About Us</a></li>
+  <li><a href="#contact">Contact Us</a></li>
+  <li><a href="#reservation" class="button">Book Reservation</a></li>
+</ul>
+</nav>
+</section>
+        
+        <section class = "banner">
+            <h2>Book Reservation Now</h2>
+            <div class = "card-container">
+                <div class = "card-img">
+                    <!-- image here -->
+                </div>
+
+                <div class = "card-content">
+                    <h3>Reservation</h3>
+                    <form>
+                        <div class = "form-row">
+                            <select name = "days">
+                                <option value = "day-select">Select Day</option>
+                                <option value = "sunday">Sunday</option>
+                                <option value = "monday">Monday</option>
+                                <option value = "tuesday">Tuesday</option>
+                                <option value = "wednesday">Wednesday</option>
+                                <option value = "thursday">Thursday</option>
+                                <option value = "friday">Friday</option>
+                                <option value = "saturday">Saturday</option>
+                            </select>
+
+                            <select name = "hours">
+                                <option value = "hour-select">Select Time</option>
+                                <option value = "10">7:00-8:00am</option>
+                                <option value = "10">8:00-9:00am</option>
+                                <option value = "10">9:00-10:00am</option>
+                                <option value = "10">11:00-12:00pm</option>
+                                <option value = "10">1:00-2:00pm</option>
+                                <option value = "10">2:00-3:00pm</option>
+                                <option value = "10">4:00-5:00pm</option>
+                                <option value = "10">5:00-6:00pm</option>
+                                <option value = "10">6:00-7:00om</option>
+                            </select>
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "text" placeholder="Full Name">
+                            <input type = "text" placeholder="Phone Number">
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "number" placeholder="Number of People?" min = "1">
+                            <input type = "submit" value = "BOOK TABLE">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>

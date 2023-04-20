@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;  
+    background-color: antiquewhite;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+/*header*/
+.header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: #F79256;
+    justify-content:space-between; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.content .header-title{
+    color: #f99b64;
+    font-size:30px ;
+}
+
+.logo{
+    color: #fff;;
+    font-weight: 900;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+
+}
+nav ul li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+nav ul li a{
+    color: #FFF;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 1px;
+}
+
+nav ul li a:hover{
+    color:#FBD1A2;
+}
+
+.button{
+background-color: #FBD1A2;
+color:#FFF;
+}
+.button:hover{
+    background-color: #FFBD73;
+    color:#FFF;
+}
+
+/*reservation*/
+.reservation{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+}
+.reservation .form-data h2{
+padding: 4rem;
+color: orange;
+}
+
+.form-data h2{
+    font-size:40px;
+}
+
+.form-data form{
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.form-data form input{
+    width: 49.5%;
+    padding: 0.7rem 0.4rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+}
+.form-data form input textarea{
+    width: 100%;
+    padding: 0.7rem 0.4rem;
+}
+
+.form-data form button{
+    display:inline-block;
+    width: 100%;
+    border: none;
+    padding: 0.9rem 0;
+    margin-top: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.form-data form button:hover{
+    background:#FFBD73;
+}
+
+.form-data form .hours{
+    padding: 4rem 0;
+}
+
+.form-data form .hours{
+    width: 49.5%;
+    padding: 0.7rem 0.4rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    color: grey;
+    
+}
+
+
