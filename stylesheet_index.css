@@ -86,7 +86,7 @@ color:#FFF;
 }
 @font-face {
     font-family: myFirstFont;
-    src: url(SteelworksVintageDemo-rR98.ttf);
+    src: url(Fonts/SteelworksVintageDemo-rR98.ttf);
 }
 .home .content span{
 font-family: myFirstFont;
