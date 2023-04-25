@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 /*header*/
 .header{
@@ -17,6 +20,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
+    text-decoration: none;
 }
 
 .content .header-title{
