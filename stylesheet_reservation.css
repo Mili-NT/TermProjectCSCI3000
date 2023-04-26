@@ -34,8 +34,12 @@ li{
     color: #f99b64;
     font-size:30px ;
 }
-
+@font-face {
+    font-family: myFirstFont;
+    src: url(Fonts/SteelworksVintageDemo-rR98.ttf);
+}
 .logo{
+    font-family: myFirstFont;
     color: #fff;;
     font-weight: 900;
 }
