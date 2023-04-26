@@ -1,78 +1,103 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Reservation Form</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stylesheet-reservation-test-style.css">
-    </head>
-
-    <!--styling for the background image-->
-    <style>
-        body, html {
-  height: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.bg-image {
-  background-image: url("Images/better-barista.avif");
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-    </style>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reservation Form
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet-reservation-test-style.css">
+</head>
+<!--styling for the background image-->
+<style>
+    body, html {
+        height: 100%;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .bg-image {
+        background-image: url("Images/better-barista.avif");
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 <body>
-    <!--navigation bar-->
-    <section class="header">
-        <a href="#name" class="logo">Daily Brew</a>
-        <nav>
-            <ul>
-                <li><a href="index_test_lauren.html" >Home</a></li>
-                <li><a href="menu.html" >Menu</a></li>
-                <li><a href="index_test_lauren.html#about">About Us</a></li>
-                <li><a href="index_test_lauren.html#contact">Contact Us</a></li>
-                <li><a href="reservation-test.html" class="button">Book Reservation</a></li>
-            </ul>
-        </nav>
-    </section>
+<!--navigation bar-->
+<section class="header">
+    <!-- Fix name fragment -->
+    <a href="#name" class="logo">Daily Brew
+    </a>
+    <nav>
+        <ul>
+            <li>
+                <a href="index_test_lauren.html" >Home
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" >Menu
+                </a>
+            </li>
+            <li>
+                <a href="index_test_lauren.html#about">About Us
+                </a>
+            </li>
+            <li>
+                <a href="index_test_lauren.html#contact">Contact Us
+                </a>
+            </li>
+            <li>
+                <a href="reservation-test.html" class="button">Book Reservation
+                </a>
+            </li>
+        </ul>
+    </nav>
+</section>
 <!--background image-->
-<div class="bg-image"></div>
-
-    <!--reservation-->
-    <div class="reservation">
-        <div class="container">
-           <div class="form-data">
-                <h2>Book Reservation</h2>
-                <form action="#">
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="Phone Number">
-                    <input type="email" placeholder="Email Address">
-                    <input type="date" placeholder="Date">
-                    <input type = "number" placeholder="Table Size" min = "1">
-                    <select class = "hours">
-                        <option value = "hour-select">Select Time</option>
-                        <option value = "10">8:00am</option>
-                        <option value = "10">9:00am</option>
-                        <option value = "10">10:00am</option>
-                        <option value = "10">12:00pm</option>
-                        <option value = "10">2:00pm</option>
-                        <option value = "10">3:00pm</option>
-                        <option value = "10">4:00pm</option>
+<div class="bg-image">
+</div>
+<!--reservation-->
+<div class="reservation">
+    <div class="container">
+        <div class="form-data">
+            <h2>Book Reservation
+            </h2>
+            <form id="reservation-form" action="#">
+                <label>
+                    <input type="text" name="name" placeholder="Name">
+                </label>
+                <label>
+                    <input type="text" name="phone" placeholder="Phone Number">
+                </label>
+                <label>
+                    <input type="email" name="email" placeholder="Email Address">
+                </label>
+                <label>
+                    <input type="date" name="date" placeholder="Date">
+                </label>
+                <label>
+                    <input type="number" name="tableSize" placeholder="Table Size" min="1">
+                </label>
+                <label>
+                    <select name="time" class="hours">
+                        <option value="hour-select">Select Time</option>
+                        <option value="10">8:00am</option>
+                        <option value="10">9:00am</option>
+                        <option value="10">10:00am</option>
+                        <option value="10">12:00pm</option>
+                        <option value="10">2:00pm</option>
+                        <option value="10">3:00pm</option>
+                        <option value="10">4:00pm</option>
                     </select>
-                    <button type="button">Book Reservation</button>
-                </form>
-           </div> 
+                </label>
+                <button type="submit">Book Reservation</button>
+            </form>
         </div>
     </div>
-
-    </body>
-    </html>
+</div>
+</body>
+</html>
