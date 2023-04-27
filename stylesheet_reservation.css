@@ -4,9 +4,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    height:100%;
+}
 body{
     font-family: 'Poppins', sans-serif;  
     background-color: antiquewhite;
+    height: 100%;
 }
 a{
     text-decoration: none;
@@ -39,9 +43,19 @@ li{
     src: url(Fonts/SteelworksVintageDemo-rR98.ttf);
 }
 .logo{
-    font-family: myFirstFont;
+    font-family: myFirstFont, serif;
     color: #fff;;
     font-weight: 900;
+}
+
+.bg-image {
+    background-image: url("Images/better-barista.avif");
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav ul{
