@@ -35,9 +35,11 @@ li{
     font-size:30px ;
 }
 
+
 .logo{
+    font-family: myFirstFont;
     color: #fff;;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 nav ul{
@@ -83,27 +85,34 @@ color:#FFF;
     padding:140px 0;
     text-align: center;   
 }
-
+@font-face {
+    font-family: myFirstFont;
+    src: url(Fonts/SteelworksVintageDemo-rR98.ttf);
+}
 .home .content span{
-font-size: large;
+font-family: myFirstFont;
+font-size: 100px;
 display: block;
 padding-bottom: 5px;
-color:white;
+color:#F79256;
 }
-.home .content .text{
-    color: #f99b64;
-    font-size:100px;
-}
+
+
 .home .content h3{
-    font-size: 30px;
+    /*font-family: myFirstFont;*/
+    font-size: 20px;
     text-transform:capitalize;
-    color:#f99b64;
+    color:#F79256;
     padding: 2px 0px;
     line-height: 1;
     padding:2px;
 }
 
 /*about us*/
+.about-us .content .header-title{
+    font-family: myFirstFont;
+    font-size: 40px;
+}
 .about-us .content .box{
     padding: 3rem 2rem;
     text-align: left;
