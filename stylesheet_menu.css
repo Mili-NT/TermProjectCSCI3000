@@ -102,7 +102,7 @@ body{
     position: absolute;
     width: 60px;
     height: 3px;
-    background-color: #00875c;
+    background-color: tomato;
     bottom: 0;
     left: 30%;
 }
@@ -126,7 +126,7 @@ body{
     position: absolute;
     width: 40px;
     height: 2px;
-    background-color: #00875c;
+    background-color: tomato;
     bottom: 0;
 }
 .single-menu {
@@ -147,14 +147,14 @@ body{
 }
 .single-menu .menu-content h5 {
     text-transform: capitalize;
-    color: #ddd;
+    color: #f99b64;
     font-size: 22px;
     font-weight: 500;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid tomato;
     padding-bottom: 10px;
     margin-bottom: 5px;
 }.single-menu .menu-content h5 span {
-    color: tomato;
+    color: #f99b64;
     float: right;
     font-weight: 600;
     font-style: italic;
