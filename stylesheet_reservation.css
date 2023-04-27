@@ -43,7 +43,7 @@ li{
     src: url(Fonts/SteelworksVintageDemo-rR98.ttf);
 }
 .logo{
-    font-family: myFirstFont;
+    font-family: myFirstFont, serif;
     color: #fff;;
     font-weight: 900;
 }
