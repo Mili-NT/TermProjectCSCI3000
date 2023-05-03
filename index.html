@@ -5,7 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheet_index.css">
 <title>Daily Brew Cafe</title>
+<script>
+    $(document).ready(function() {
+        // When the form is submitted
+        $('#contact-form').on('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission behavior
 
+            // Get the form data
+            const formData = $(this).serialize();
+
+            // Send a POST request to the /reserve endpoint
+            $.ajax({
+                type: 'POST',
+                url: '/contact',
+                data: formData,
+                success: function(response) {
+                    // Handle successful response
+                    console.log(response);
+                },
+                error: function(xhr, status, error) {
+                    // Handle error response
+                    console.log(xhr.responseText);
+                }
+            });
+        });
+    });
+</script>
 </head>
 <style>
     body {
@@ -82,9 +107,13 @@
         <div class="bottom-section contact">
             <h1>Contact Us</h1>
             <br>
-            <form action="index.html" method="post">
-                <input type="email" name="email" class="text-input contact-input" placeholder="Your Email Address">
-                <textarea name="message" class="text-input contact-input" placeholder="Your Message"></textarea>
+            <form id="contact-form" action="index.html" method="post">
+                <label>
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your Email Address">
+                </label>
+                <label>
+                    <textarea name="message" class="text-input contact-input" placeholder="Your Message"></textarea>
+                </label>
                 <br>
                 <button type="submit" class="button">Send</button>
             </form>
