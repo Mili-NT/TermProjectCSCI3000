@@ -14,7 +14,24 @@ a{
 li{
     list-style-type: none;
 }
+.bg-image {
+    position: relative;
+    inset: 0;
+    z-index: -1;
+    min-height: inherit;
+}
+.bg-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
 
+    filter: blur(10px);
+    background-image: url('Images/MenuBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+}
 /*header*/
 .header{
     display:flex;
