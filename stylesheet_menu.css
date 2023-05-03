@@ -15,9 +15,9 @@ li{
     list-style-type: none;
 }
 .bg-image {
-    background-image: url("Images/better-barista.avif");
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
+    background-image: url("Images/MenuBackground.jpg");
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
